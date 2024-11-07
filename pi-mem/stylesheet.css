@@ -127,10 +127,10 @@
         rotate: 0deg;
     }
     25% {
-        rotate: 12deg;
+        rotate: 3deg;
     }
     75% {
-        rotate: -12deg;
+        rotate: -3deg;
     }
     100% {
         rotate: 0deg;
