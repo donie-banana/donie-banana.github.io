@@ -68,32 +68,23 @@ header img {
 }
 
 main {
-    background: linear-gradient(to top left, #cbeff0, #83acaf, #3e4c4f);
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-main > .block > div {
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.5px);
+    background: #efefef;
 }
 
 .block {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    width: 95%;
+    margin: 0 auto;
 }
 
-.block#een {
-    justify-content: left;
-}
-
-.block#twee {
-    justify-content: right;
+.block > div {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
 }
 
 footer {

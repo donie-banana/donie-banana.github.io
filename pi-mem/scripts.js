@@ -30,8 +30,12 @@ function bad() {
 
 function checkIfHighscore() {
     let score = currentDecimal;
+    console.log('check if highscore called')
+    console.log('score > currentHS = ' + (score > currentHS))
+    console.log('highscore: ' + currentHS + '; score: ' + score)
 
     if(score > currentHS) {
+        console.log('highscor')
         badAlert += 'je hebt een highscore! ';
         currentHS = score;
         HSElement.innerHTML = score;
@@ -39,7 +43,6 @@ function checkIfHighscore() {
 
     badAlert += 'je had ' + score + ' decimalen.'
     window.alert(badAlert);
-    currentHS = score;
     score = 0;
     currentString = '3.1'
 }
