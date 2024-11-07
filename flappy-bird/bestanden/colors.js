@@ -1,46 +1,18 @@
+function randomColor(img, filterId) {
 
-// Rainbow colors as filter matrix values
-const colorMatrices = {
-    red: `
-        1 0 0 0 0
-        0 0 0 0 0
-        0 0 0 0 0
-        0 0 0 1 0
-    `,
-    orange: `
-        1 0.5 0 0 0
-        0 0.4 0 0 0
-        0 0 0.1 0 0
-        0 0 0 1 0
-    `,
-    yellow: `
-        1 1 0 0 0
-        0 1 0 0 0
-        0 0 0 0 0
-        0 0 0 1 0
-    `,
-    green: `
-        0 0 0 0 0
-        0 1 0 0 0
-        0 1 0 0 0
-        0 0 0 1 0
-    `,
-    blue: `
-        0 0 0 0 0
-        0 0 0 0 0
-        0 0 1 0 0
-        0 0 0 1 0
-    `,
-    purple: `
-        0.5 0 0.5 0 0
-        0 0 0 0 0
-        1 0 1 0 0
-        0 0 0 1 0
-    `,
-};
+    // Function to generate random RGB values ensuring brightness
+    function generateRandomBrightColorMatrix() {
+        let r = Math.random() * 0.9 + 0.1; // Ensure at least 10% brightness
+        let g = Math.random() * 0.9 + 0.1;
+        let b = Math.random() * 0.9 + 0.1;
 
-function applyRandomColorToSVG(imageId, filterId) {
-    const img = document.getElementById(imageId);
+        return `
+            ${r} 0 0 0 0
+            0 ${g} 0 0 0
+            0 0 ${b} 0 0
+            0 0 0 1 0
+        `;
+    }
 
     // Load the SVG content from the image
     fetch(img.src)
@@ -68,19 +40,17 @@ function applyRandomColorToSVG(imageId, filterId) {
             const filter = document.createElementNS("http://www.w3.org/2000/svg", "filter");
             filter.setAttribute("id", filterId);
 
-            // Select a random color matrix
-            const colors = Object.keys(colorMatrices);
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            // Generate a random bright color matrix
             const feColorMatrix = document.createElementNS("http://www.w3.org/2000/svg", "feColorMatrix");
             feColorMatrix.setAttribute("type", "matrix");
-            feColorMatrix.setAttribute("values", colorMatrices[randomColor]);
+            feColorMatrix.setAttribute("values", generateRandomBrightColorMatrix());
 
             // Append the color matrix to the filter
             filter.appendChild(feColorMatrix);
             defs.appendChild(filter);
 
             // Apply the filter to the entire SVG
-            svgElement.setAttribute("filter", `url(#${filterId})`);
+            svgElement.style.filter = `url(#${filterId})`;
 
             // Replace the image source with the updated SVG
             const serializer = new XMLSerializer();
@@ -89,6 +59,3 @@ function applyRandomColorToSVG(imageId, filterId) {
         })
         .catch((error) => console.error("Error loading SVG:", error));
 }
-
-// Apply a random color to the pipe-img image
-applyRandomColorToSVG("pipe-img", "randomColorFilter");

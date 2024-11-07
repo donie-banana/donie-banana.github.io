@@ -1,0 +1,41 @@
+html {
+    background-color: blanchedalmond;
+}
+
+body {
+    overflow: hidden;
+}
+
+#bird-img {
+    height: 300px;
+}
+
+#pipes{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    right: -9999px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+}
+
+.pipe {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+#pipe-img-top {
+    transform: scaleY(-1);
+}
+
+.pipe-img {
+    height: 600px;
+}
+
+#pipe-og {
+    display: none;
+}
