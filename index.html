@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Dion's omgeving</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dion's omgeving</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    
+    <header>
+        <video autoplay muted loop  id="video">
+            <source src="video.mp4" type="video/mp4" alt="Video banner">
+        </video>
+        <div id="overlay"></div>
+
+        <img src="logo.png" alt="logo">
+        <div class="links-container">
+            <ul>
+                <li>pi-mem</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </div>
+    </header>
+    <main >
+        <div class="block" id="een">
+            <div id="intro-tekst">
+                <h1>dit is een titel</h1>
+                <p>dit is een intro tekst, hier staan dingen over deze site. dit is een intro tekst, hier staan dingen over deze site. dit is een intro tekst, hier staan dingen over deze site. dit is een intro tekst, hier staan dingen over deze site.</p>
+            </div>
+        </div>
+        <div class="block" id="twee">
+            <div id="over-mij">
+                <h1>over mij</h1>
+                <p>dit is een over mij tekst, deze tekst gaat over mij. dit is een over mij tekst, deze tekst gaat over mij. dit is een over mij tekst, deze tekst gaat over mij. dit is een over mij tekst, deze tekst gaat over mij. dit is een over mij tekst, deze tekst gaat over mij. </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h1>dit is de footer titel</h1>
+        <ul>
+            <li>
+                <ul>
+                    <li><h2>dit is een footer kolom</h2></li>
+                    <li>dit is een footer item</li>
+                    <li>dit is een footer item</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><h2>dit is een footer kolom</h2></li>
+                    <li>dit is een footer item</li>
+                    <li>dit is een footer item</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><h2>dit is een footer kolom</h2></li>
+                    <li>dit is een footer item</li>
+                    <li>dit is een footer item</li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById('video').playbackRate = 0.5;
+    </script>
 </body>
 </html>
