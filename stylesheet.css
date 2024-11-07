@@ -61,10 +61,19 @@ header img {
     list-style-type: none;
 }
 
-.links-container ul li {
+.links-container ul li, .links-container ul li a {
     font-weight: bold;
     color: #8d8d8d;
     font-size: 20px;
+}
+
+.links-container ul li a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.links-container ul li a:hover {
+    color: #6f6f6f;
 }
 
 main {
