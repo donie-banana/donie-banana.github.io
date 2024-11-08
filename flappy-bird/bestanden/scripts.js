@@ -22,7 +22,7 @@ const pipeWidth = pipeElement.clientWidth;
 pipeElement.style.display = 'none';
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
-var numberOfClones = Math.floor(screenWidth / pipeWidth);
+var numberOfClones = Math.floor(screenWidth / (pipeWidth * 1.5));
 var offset = (((screenWidth + 500) - (pipeWidth * (numberOfClones))) / numberOfClones) + pipeWidth; // Divide by total gaps
 
 console.log(
@@ -38,7 +38,7 @@ for (var i = 1; i <= numberOfClones; i++) {
 
     clone.style.position = "absolute";
     clone.style.right = (i * offset * -1) + "px";
-    clone.style.top = '' + (getRandomInt(25, 75)) + '%';
+    clone.style.top = '' + (getRandomInt(35, 65)) + '%';
     clone.style.display = 'flex';
 
     var imgChildren = clone.querySelectorAll('img');
