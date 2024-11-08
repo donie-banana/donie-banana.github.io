@@ -26,6 +26,7 @@ body {
     gap: 150px;
     transform: translate(-50%, -50%);
     top: 50%;
+    width: fit-content;
 }
 
 #pipe-img-top {
@@ -34,8 +35,4 @@ body {
 
 .pipe-img {
     height: 600px;
-}
-
-#pipe-og {
-    display: none;
 }

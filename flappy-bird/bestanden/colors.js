@@ -1,15 +1,16 @@
 function randomColor(img, filterId) {
 
-    function generateRandomBrightColorMatrix() {
-        let r = Math.random() * 0.9 + 0.1;
-        let g = Math.random() * 0.9 + 0.1;
-        let b = Math.random() * 0.9 + 0.1;
+    function getColorMatrix() {
+        let r = Math.random() * 0.8 + 0.2;
+        let g = Math.random() * 0.8 + 0.2;
+        let b = Math.random() * 0.8 + 0.2;
+        let a = Math.random() * 0.1 + 0.9;
 
         return `
             ${r} 0 0 0 0
             0 ${g} 0 0 0
             0 0 ${b} 0 0
-            0 0 0 1 0
+            0 0 0 ${a} 0
         `;
     }
 
@@ -36,7 +37,7 @@ function randomColor(img, filterId) {
 
             const feColorMatrix = document.createElementNS("http://www.w3.org/2000/svg", "feColorMatrix");
             feColorMatrix.setAttribute("type", "matrix");
-            feColorMatrix.setAttribute("values", generateRandomBrightColorMatrix());
+            feColorMatrix.setAttribute("values", getColorMatrix());
 
             filter.appendChild(feColorMatrix);
             defs.appendChild(filter);
