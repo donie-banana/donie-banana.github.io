@@ -10,16 +10,6 @@ body {
     height: 300px;
 }
 
-#pipes{
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    right: -9999px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-}
-
 .pipe {
     display: flex;
     flex-direction: column;
@@ -34,5 +24,5 @@ body {
 }
 
 .pipe-img {
-    height: 600px;
+    height: 1200px;
 }
