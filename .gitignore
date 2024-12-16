@@ -1,1 +1,4 @@
 *.scss
+*.css.map
+prepros.config
+__index.html
