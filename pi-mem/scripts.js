@@ -15,6 +15,12 @@ function good() {
     currentString += piCurrent;
     piElement.style.transform = 'translate(calc(-50% - ' + shift +'px), -50%)';
     piCurrent = piDecimals[currentDecimal];
+
+    if (currentDecimal => currentHS) {
+        currentHS = currentDecimal;
+        HSElement.innerHTML = currentHS;
+        localStorage.setItem("highscore", currentHS);
+    }
 }
 
 function bad() {
@@ -70,10 +76,22 @@ let currentDecimal = 0;
 let piCurrent = piDecimals[currentDecimal];
 let shift = 0;
 const shiftAdjust = 50;
-let currentHS = 0; 
+let currentHS = (localStorage.getItem("highscore") !== null) ? localStorage.getItem("highscore") : 0; 
 let currentString = '3.';
 let badAlert = '';
 
+HSElement.innerHTML = currentHS;
+
 document.getElementById("input").addEventListener("keyup", function (event) {
-    check(event.keyCode);
+    piCode = piCurrent.charCodeAt(0);
+    if (!allowedChars.includes(event.keyCode)) {
+        return;
+    }
+
+    if (event.keyCode !== piCode) {
+        bad();
+        return;
+    }
+
+    good();
 });
