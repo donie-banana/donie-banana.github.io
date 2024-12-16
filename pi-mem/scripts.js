@@ -13,7 +13,7 @@ function good() {
     scoreElement.innerHTML = currentDecimal;
     piElement.append(piCurrent);
     currentString += piCurrent;
-    piElement.style.transform = 'translate(calc(-50% - ' + shift +'px), -50%)';
+    piElement.style.transform = `translate(calc(-50% - ${shift}px), -50%)`;
     piCurrent = piDecimals[currentDecimal];
 
     if (currentDecimal => currentHS) {
@@ -24,7 +24,7 @@ function good() {
 }
 
 function bad() {
-    badAlert = 'verkeerd, het volgende nummer was: ' + piCurrent + '\n';
+    badAlert = `verkeerd, het volgende nummer was: ${piCurrent} \n`;;
     checkIfHighscore();
     piElement.innerHTML = "3.";
     scoreElement.innerHTML = "0";
@@ -43,24 +43,10 @@ function checkIfHighscore() {
         HSElement.innerHTML = score;
     } 
 
-    badAlert += 'je had ' + score + ' decimalen.'
+    badAlert += `je had ${score} decimalen.`;
     window.alert(badAlert);
     score = 0;
     currentString = '3.1'
-}
-
-function check(code) {
-    piCode = piCurrent.charCodeAt(0);
-    if (!allowedChars.includes(code)) {
-        return;
-    }
-
-    if (code !== piCode) {
-        bad();
-        return;
-    }
-
-    good();
 }
 
 var form = document.getElementById("form");
@@ -71,7 +57,7 @@ const piDecimals = '141592653589793238462643383279502884197169399375105820974944
 const piElement = document.getElementById('pi');
 const scoreElement = document.getElementById('score');
 const HSElement = document.getElementById('highscore');
-const allowedChars = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57]
+const allowedKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 let currentDecimal = 0;
 let piCurrent = piDecimals[currentDecimal];
 let shift = 0;
@@ -83,12 +69,13 @@ let badAlert = '';
 HSElement.innerHTML = currentHS;
 
 document.getElementById("input").addEventListener("keyup", function (event) {
-    piCode = piCurrent.charCodeAt(0);
-    if (!allowedChars.includes(event.keyCode)) {
+    piCode = piCurrent;
+    console.log(`picode: ${piCode}, event.key: ${event.key}`)
+    if (!allowedKeys.includes(event.key)) {
         return;
     }
 
-    if (event.keyCode !== piCode) {
+    if (event.key !== piCode) {
         bad();
         return;
     }
