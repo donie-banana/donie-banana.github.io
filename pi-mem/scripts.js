@@ -69,7 +69,7 @@ let badAlert = '';
 HSElement.innerHTML = currentHS;
 
 document.getElementById("input").addEventListener("keyup", function (event) {
-    console.log(`picode: ${piCode}, event.key: ${event.key}`)
+    
     if (!allowedKeys.includes(event.key)) {
         return;
     }
