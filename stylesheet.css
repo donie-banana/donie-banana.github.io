@@ -6,8 +6,7 @@
 }
 
 body {
-  background-image: -webkit-image-set(url(bg.webp) type("image/webp"), url(bg.jpg) type("image/jpeg"));
-  background-image: image-set(url(bg.webp) type("image/webp"), url(bg.jpg) type("image/jpeg"));
+  background: url(bg.jpg) no-repeat center center/cover;
 }
 
 #overzicht {
@@ -68,4 +67,3 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
-/*# sourceMappingURL=stylesheet.css.map */
