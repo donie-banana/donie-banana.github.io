@@ -24,6 +24,9 @@ function good() {
 }
 
 function bad() {
+    dsElement.innerHTML = `You failed on decimal nr.: ${currentDecimal}`;
+    wwnElement.innerHTML = `Your next decimal was: ${piCurrent}`;
+    overlayElement.style.display = "flex";
     badAlert = `verkeerd, het volgende nummer was: ${piCurrent} \n`;
     checkIfHighscore();
     piElement.innerHTML = "3.";
@@ -32,7 +35,6 @@ function bad() {
     shift = 0;
     currentDecimal = 0;
     piCurrent = piDecimals[currentDecimal];
-    overlayElement.style.display = "flex";
 
 }
 
@@ -64,6 +66,8 @@ const piElement = document.getElementById('pi');
 const scoreElement = document.getElementById('score');
 const HSElement = document.getElementById('highscore');
 const overlayElement = document.getElementById("overlay-container");
+const wwnElement = overlayElement.getElementsByClassName("whatsWasNext")[0];
+const dsElement = overlayElement.getElementsByClassName("deathScore")[0];
 const allowedKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 let currentDecimal = 0;
 let piCurrent = piDecimals[currentDecimal];
