@@ -3,3 +3,4 @@
 prepros.config
 __index.html
 secret/*
+*.php
