@@ -32,6 +32,8 @@ function bad() {
     shift = 0;
     currentDecimal = 0;
     piCurrent = piDecimals[currentDecimal];
+    overlayElement.style.display = "flex";
+
 }
 
 function checkIfHighscore() {
@@ -44,9 +46,13 @@ function checkIfHighscore() {
     } 
 
     badAlert += `je had ${score} decimalen.`;
-    window.alert(badAlert);
+    // window.alert(badAlert);
     score = 0;
     currentString = '3.1'
+}
+
+function restart() {
+    overlayElement.style.display = "none";
 }
 
 var form = document.getElementById("form");
@@ -57,6 +63,7 @@ const piDecimals = '141592653589793238462643383279502884197169399375105820974944
 const piElement = document.getElementById('pi');
 const scoreElement = document.getElementById('score');
 const HSElement = document.getElementById('highscore');
+const overlayElement = document.getElementById("overlay-container");
 const allowedKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 let currentDecimal = 0;
 let piCurrent = piDecimals[currentDecimal];
@@ -66,6 +73,7 @@ let currentHS = (localStorage.getItem("pihighscore") !== null) ? localStorage.ge
 let currentString = '3.';
 let badAlert = '';
 
+overlayElement.style.display = "none";
 HSElement.innerHTML = currentHS;
 
 document.getElementById("input").addEventListener("keyup", function (event) {
