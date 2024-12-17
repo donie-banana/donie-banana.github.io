@@ -24,7 +24,7 @@ function good() {
 }
 
 function bad() {
-    badAlert = `verkeerd, het volgende nummer was: ${piCurrent} \n`;;
+    badAlert = `verkeerd, het volgende nummer was: ${piCurrent} \n`;
     checkIfHighscore();
     piElement.innerHTML = "3.";
     scoreElement.innerHTML = "0";
@@ -55,7 +55,7 @@ function restart() {
     overlayElement.style.display = "none";
 }
 
-var form = document.getElementById("form");
+const form = document.getElementById("form");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
 
