@@ -2,7 +2,7 @@ function movePipes(pipeElement, speed) {
     setTimeout(() => {
         let right = parseInt(pipeElement.style.right, 10); 
         right += speed; // Move the pipe to the right
-        pipeElement.style.right = '' + right + 'px';
+        pipeElement.style.right = `${right}px`;
 
         if (right > window.innerWidth) {
             pipeElement.style.right = '-500px'; 
@@ -23,12 +23,10 @@ pipeElement.style.display = 'none';
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 var numberOfClones = Math.floor(screenWidth / (pipeWidth * 1.5));
-var offset = (((screenWidth + 500) - (pipeWidth * (numberOfClones))) / numberOfClones) + pipeWidth; // Divide by total gaps
+var offset = (screenWidth + 500 - pipeWidth * numberOfClones) / numberOfClones + pipeWidth;
 
 console.log(
-    'width: ' + screenWidth + '; height: ' + screenHeight +
-    '; pipe width: ' + pipeWidth + '; numberOfClones: ' +
-    numberOfClones + '; gapSize: ' + offset
+    `width: ${screenWidth}; height: ${screenHeight}; pipe width: ${pipeWidth}; numberOfClones: ${numberOfClones}; gapSize: ${offset}`
 );
 
 
