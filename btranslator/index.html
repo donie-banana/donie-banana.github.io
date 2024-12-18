@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bestanden/stylesheet.css">
+</head>
+<body>
+
+    <div class="form">
+        <label for="what">what?</label>
+        <select name="what" id="what">
+            <option value="auto">auto detect</option>
+            <option value="B2N">binary to natural</option>
+            <option value="N2B">natural to binary</option>
+        </select>
+    
+        <label for="input">Input</label>
+        <input type="text" id="input">
+    
+        <label for="output">Output:</label>
+        <input type="text" id="output" disabled>
+    
+        <button onclick="Translate()">translate</button>
+    </div>
+    
+    <script src="bestanden/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+*{padding:0;margin:0}body>.form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}body>.form>label{display:none}body>.form>input{width:90vw;height:20vh;margin:0 auto}body>.form>input#input{background-color:aliceblue}body>.form>input#output{background-color:antiquewhite}body>.form>button,body>.form>select#what{width:10vw;height:5vh;margin:0 auto}
+/*# sourceMappingURL=stylesheet.css.map */
