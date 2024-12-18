@@ -15,8 +15,6 @@ function Translate() {
                 }
 
                 counter /= 2;
-
-                // console.log(counter, char, decimal);
             }
 
             output += String.fromCharCode(decimal);
