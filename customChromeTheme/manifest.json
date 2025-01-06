@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "gekke henkie",
+    "version": "1.0",
+    "description": "mijn eigen thema",
+    "chrome_url_overrides": {
+      "newtab": "newtab.html"
+    },
+    "permissions": [],
+    "icons": {
+      "48": "img/banana.png"
+    }
+  }
+  

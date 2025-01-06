@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>new tab</title>
+
+    <!-- meta spul -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dion Beau Gierman">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="bestanden/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="logo">
+
+        <div id="timewidget">
+            <div class="time"></div>
+            <div class="date"></div>
+        </div>
+    </header>
+
+    <div class="open" id="open">
+        <div class="icon">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+    </div>
+    
+    <div id="settings" class="settings closed">
+        <label>Clock</label>
+        <div class="setting-group">
+            <div class="setting clock">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label> 
+                <label for="showDate">Show date</label>
+            </div>
+            <div class="setting clock">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label> 
+                <label for="showTime">Show time</label>
+            </div>
+            <div class="setting clock">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label> 
+                <label for="showSeconds">Show seconds</label>
+            </div>
+            <!-- <button class="settings-btn" id="save-clock">Save</button> -->
+        </div>
+
+        <hr>
+
+        <label>Hotbar</label>
+        <div class="setting-group">
+            <div class="setting hotbar">
+                <div class="add-item" id="add-item">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <button class="settings-btn" id="save-hotbar">Save</button>
+        </div>
+
+        <div class="close" id="close">
+            <div class="close-stripe"></div>
+            <div class="close-stripe opposite"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="links">
+            <div class="linklist">
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="bestanden/scripts.js"></script>
+</body>
+</html>
