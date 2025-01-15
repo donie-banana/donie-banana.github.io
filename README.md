@@ -8,7 +8,7 @@ ga naar donie-banana.github.io om dit project te bekijken / spelen.
 
 --------------------------------------------------------------------------
 
-** Dutch **
+** Nederlands **
 
 <h2>hoe maak ik een custom newpage? (english underneath)</h2>
 <h3>DISCLAIMER</h3>
