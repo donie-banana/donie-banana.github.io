@@ -64,7 +64,7 @@ Newpage html is the page, you can design it with css and functions with js.
 PHP is NOT possible as this is a client side theme.
 <h4>STEP 1.1 MAKE THE MANIFEST.JSON</h4>
 The manifest.json tells chrome what to do with these files. 
-For a custom newpage, “chrome_url_overrides”: { “newtab”: “newtab.html”} is sws already needed.
+For a custom newpage, “chrome_url_overrides”: { “newtab”: “newtab.html”} is needed.
 Example: 
 ```json
 {
@@ -90,4 +90,4 @@ Now you can create it just like a normal web page.
 <h3>STEP 4 SAY THANKS TO DION</h3>
 Say thank you to Dion for making this document for you.
 
-Translated with DeepL.com (free version)
+<sub>Translated with DeepL.com (free version)</sub>
