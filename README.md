@@ -63,7 +63,7 @@ PHP is NOT possible as this is a client side theme.
 The manifest.json tells chrome what to do with these files. 
 For a custom newpage, “chrome_url_overrides”: { “newtab”: “newtab.html”} is needed.
 Example: 
-```json
+<pre>
 {
     “manifest_version": 3,
     “name": ‘mad henkie’,
@@ -77,7 +77,7 @@ Example:
       “48": ”img/banana.png”
     }
 }
-```
+</pre>
 <h3>STEP 2 CHROME://EXTENSIONS/</h3>
 Go to chrome://extensions/, click on “developer mode” at the top right. Now you can click “load unpacked” on the top left. Click on the folder you just created.
 
