@@ -63,21 +63,23 @@ PHP is NOT possible as this is a client side theme.
 The manifest.json tells chrome what to do with these files. 
 For a custom newpage, “chrome_url_overrides”: { “newtab”: “newtab.html”} is needed.
 Example: 
-<pre>
+
+
 {
-    “manifest_version": 3,
-    “name": ‘mad henkie’,
-    “version": ‘1.0’,
-    “description": ‘my own theme’,
-    “chrome_url_overrides": {
-      “newtab": ”newtab.html”
-    },
-    “permissions": [],
-    “icons": {
-      “48": ”img/banana.png”
-    }
+&nbsp;&nbsp;&nbsp;&nbsp;“manifest_version": 3,
+&nbsp;&nbsp;&nbsp;&nbsp;“name": ‘mad henkie’,
+&nbsp;&nbsp;&nbsp;&nbsp;“version": ‘1.0’,
+&nbsp;&nbsp;&nbsp;&nbsp;“description": ‘my own theme’,
+&nbsp;&nbsp;&nbsp;&nbsp;“chrome_url_overrides": {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“newtab": ”newtab.html”
+&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;“permissions": [],
+&nbsp;&nbsp;&nbsp;&nbsp;“icons": {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“48": ”img/banana.png”
+&nbsp;&nbsp;&nbsp;&nbsp;}
 }
-</pre>
+
+
 <h3>STEP 2 CHROME://EXTENSIONS/</h3>
 Go to chrome://extensions/, click on “developer mode” at the top right. Now you can click “load unpacked” on the top left. Click on the folder you just created.
 
