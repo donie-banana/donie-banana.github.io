@@ -45,9 +45,6 @@ Ga naar chrome://extensions/, klik rechts boven “developer mode” aan. Nu kan
 <h3>STAP 3 DESIGN EN CREEER</h3>
 Nu kan je net als een normale webpagina hem verder maken.
 
-<h3>STAP 4 ZEG BEDANKT TEGEN DION</h3>
-Ff bedankt tegen Dion zeggen om dit document voor je te maken.
-
 --------------------------------------------------------------------------
 
 ** English **
@@ -86,8 +83,5 @@ Go to chrome://extensions/, click on “developer mode” at the top right. Now 
 
 <h3>STEP 3 DESIGN AND CREATE</h3>
 Now you can create it just like a normal web page.
-
-<h3>STEP 4 SAY THANKS TO DION</h3>
-Say thank you to Dion for making this document for you.
-
+<br>
 <sub>Translated with DeepL.com (free version)</sub>
