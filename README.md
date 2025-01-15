@@ -24,21 +24,21 @@ PHP is NIET mogelijk aangezien dit een client side thema is.
 De manifest.json verteld chrome wat die met deze bestanden aan moet. 
 Voor een custom newpage is "chrome_url_overrides": { "newtab": "newtab.html”} sws al nodig.
 Voorbeeld: 
-```json
+
 {
-    "manifest_version": 3,
-    "name": "gekke henkie",
-    "version": "1.0",
-    "description": "mijn eigen thema",
-    "chrome_url_overrides": {
-      "newtab": "newtab.html"
-    },
-    "permissions": [],
-    "icons": {
-      "48": "img/banana.png"
-    }
+&nbsp;&nbsp;&nbsp;&nbsp;“manifest_version": 3,
+&nbsp;&nbsp;&nbsp;&nbsp;“name": ‘mad henkie’,
+&nbsp;&nbsp;&nbsp;&nbsp;“version": ‘1.0’,
+&nbsp;&nbsp;&nbsp;&nbsp;“description": ‘my own theme’,
+&nbsp;&nbsp;&nbsp;&nbsp;“chrome_url_overrides": {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“newtab": ”newtab.html”
+&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;“permissions": [],
+&nbsp;&nbsp;&nbsp;&nbsp;“icons": {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“48": ”img/banana.png”
+&nbsp;&nbsp;&nbsp;&nbsp;}
 }
-```
+
 <h3>STAP 2 CHROME://EXTENSIONS/</h3>
 Ga naar chrome://extensions/, klik rechts boven “developer mode” aan. Nu kan je links boven op “load unpacked” klikken. Klik hiermee de map aan de je net hebt aangemaakt.
 
