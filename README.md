@@ -25,6 +25,7 @@ De manifest.json verteld chrome wat die met deze bestanden aan moet.
 Voor een custom newpage is "chrome_url_overrides": { "newtab": "newtab.html”} sws al nodig.
 Voorbeeld: 
 
+
 {
 &nbsp;&nbsp;&nbsp;&nbsp;“manifest_version": 3,
 &nbsp;&nbsp;&nbsp;&nbsp;“name": ‘mad henkie’,
